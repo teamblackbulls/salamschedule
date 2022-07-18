@@ -23,7 +23,7 @@
 	
   	<style>
   		.login-box{
-    		height: 380px;
+    		height: 550px;
 		}
 		
 		ul {
@@ -107,7 +107,7 @@
 		}
 		.center{
 		  position: absolute;
-		  top: 52%;
+		  top: 65%;
 		  left: 50%;
 		  transform: translate(-50%, -50%);
 		  width: 100%;
@@ -169,7 +169,7 @@
 		</div>
 	</nav>
 
-	
+	<div class="center">
 	<form method="post" action="RegisterAdminController">
 		<div class="login-box">
 			<img src="assets/user.png" class="avatar">
