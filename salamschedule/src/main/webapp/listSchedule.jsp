@@ -206,7 +206,7 @@
 	      	<li><a href="adminHome.jsp">Home</a></li>
 	      	<li><a href="ListStaffController">Manage Staff</a></li>
 			<li><a href="ListPrayerController">Manage Prayer</a></li>
-		      <li><a href="ListPrayerController">Manage Reschedule Request</a></li>
+		      <li><a href="listRescheduleRequest.jsp">Manage Reschedule Request</a></li>
 			<li><a href="index.html">Logout</a></li>
 		  </ul>
 		</div>
