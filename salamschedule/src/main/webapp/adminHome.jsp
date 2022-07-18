@@ -143,6 +143,7 @@
       </div>
       <ul>
 		<li><a href="#">Admin</a></li>
+	      <li><a href="registerAdmin.jsp">Register</a></li>
 		<li><a href="index.html">Logout</a></li>
 	  </ul>
     </div>
