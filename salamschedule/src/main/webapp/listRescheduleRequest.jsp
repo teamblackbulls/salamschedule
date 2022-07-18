@@ -10,7 +10,7 @@
     <!------<title> Website Layout | CodingLab</title>------>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
-	<title>List of Schedules</title>
+	<title>List of Reschedules</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -228,17 +228,16 @@
 				
 				<th colspan="3">Actions</th>
 			</tr>
-			<c:forEach  items="${reschedules}" var="sc" varStatus="reschedules">
+			<c:forEach  items="${reschedules}" var="rc" varStatus="reschedules">
 			<tr>
-				<td><c:out value="${sc.rescheduleid}" /></td>
-				<td><c:out value="${sc.scheduleid}" /></td>
-				<td><c:out value="${sc.rescheduledate}" /></td>
-				<td><c:out value="${sc.rescheduleprayerid}" /></td>
-				<td><c:out value="${sc.staffid}" /></td>
+				<td><c:out value="${rc.rescheduleid}" /></td>
+				<td><c:out value="${rc.scheduleid}" /></td>
+				<td><c:out value="${rc.rescheduledate}" /></td>
+				<td><c:out value="${rc.rescheduleprayerid}" /></td>
+				<td><c:out value="${rc.staffid}" /></td>
 				
-				<td><a href="ViewScheduleController?action=viewSchedule&scheduleid=<c:out value="${sc.scheduleid}" />" class="btn btn-warning">View</a></td>
-				<td><a href="UpdateScheduleController?action=updateSchedule&scheduleid=<c:out value="${sc.scheduleid}" />" class="btn btn-primary">Update</a></td>
-				<td><button class="btn btn-danger" id="<c:out value="${sc.scheduleid}"/>" onclick="confirmation(this.scheduleid)">Delete</button></td>
+				<td><a href="UpdateScheduleController?action=updateSchedule&scheduleid=<c:out value="${rc.scheduleid}" />" class="btn btn-primary">Update Schedule</a></td>
+				<td><button class="btn btn-danger" id="<c:out value="${rc.rescheduleid}"/>" onclick="confirmation(this.scheduleid)">Delete</button></td>
 			</tr>
 			</c:forEach>
 		</table>
@@ -252,8 +251,8 @@
 		console.log(scheduleid);
 		var r = confirm("Are you sure you want to delete?");
 		if (r == true) {
-			location.href = 'DeleteScheduleController?id=' + scheduleid;
-			alert("Schedule successfully deleted");
+			location.href = 'DeleteRescheduleController?id=' + scheduleid;
+			alert("Reschedule successfully deleted");
 		} else {
 			return false;
 		}
